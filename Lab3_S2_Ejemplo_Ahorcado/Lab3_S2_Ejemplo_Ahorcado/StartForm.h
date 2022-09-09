@@ -1,4 +1,5 @@
 #pragma once
+#include "JuegoForm.h"
 
 namespace Lab3S2EjemploAhorcado {
 
@@ -100,7 +101,8 @@ namespace Lab3S2EjemploAhorcado {
 #pragma endregion
 	private: System::Void btnJugar_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (!txtPalabra->Text->Trim()->Equals("")) {
-
+			JuegoForm^ newJuego = gcnew JuegoForm();
+			newJuego->ShowDialog();
 		}
 		else {
 			MessageBox::Show("Debe ingresar una palabra", "Input incorrecto", MessageBoxButtons::OK, MessageBoxIcon::Error);
